@@ -4,14 +4,14 @@ const server = express();
 
 server.use(express.json());
 
-const projects = [{ id: 2, title: 'Projeto 2', tasks: [] }];
+const projects = [];
 var count = 0;
 
 
 // Middlewares
 
 server.use((req, res, next) => {
-	
+
 	count++;
 
 	console.log(`Total de requisições ${count}`);
